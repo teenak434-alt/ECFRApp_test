@@ -1,0 +1,937 @@
+{
+  "FetchedAt": "2026-01-04T05:28:15.737748Z",
+  "Documents": [
+    {
+      "DocumentNumber": null,
+      "Title": "General authority of Director.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 2 \u00A7 2.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Publication of statutes, regulations, and related documents.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2022-12-29T00:00:00",
+      "Citation": "Title 1 Part 2 \u00A7 2.5",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Unrestricted use.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 2 \u00A7 2.6",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Daily publication.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 5 \u00A7 5.6",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Delivery and mailing.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 5 \u00A7 5.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Analytical subject indexes.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 6 \u00A7 6.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Publication required.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 10 \u00A7 10.10",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Federal Register Index.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 11 \u00A7 11.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Federal Register.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2022-05-04T00:00:00",
+      "Citation": "Title 1 Part 12 \u00A7 12.1",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Code of Federal Regulations.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2022-12-29T00:00:00",
+      "Citation": "Title 1 Part 12 \u00A7 12.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "\u00A7 12.5 [Reserved]",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2022-12-29T00:00:00",
+      "Citation": "Title 1 Part 12 \u00A7 12.5",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Public Papers of the Presidents of the United States.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 12 \u00A7 12.5",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Information on drafting and publication.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 15 \u00A7 15.10",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Certifying duties.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 16 \u00A7 16.3",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Criteria for deferred schedule.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 17 \u00A7 17.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Form of certification.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2017-01-23T00:00:00",
+      "Citation": "Title 1 Part 18 \u00A7 18.6",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Seal.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 18 \u00A7 18.8",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Routing and approval of drafts.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 19 \u00A7 19.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Routing and certification of originals and copies.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 19 \u00A7 19.3",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Organization.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 20 \u00A7 20.3",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Description of program activities.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 20 \u00A7 20.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Sources of information.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 20 \u00A7 20.5",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Form, style, arrangement and apportionment of space.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 20 \u00A7 20.6",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Composition of part headings.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 21 \u00A7 21.19",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Titles and subtitles.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 21 \u00A7 21.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Code designation.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 22 \u00A7 22.6",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Codification.",
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 22 \u00A7 22.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Activities.",
+      "AgencyName": "Administrative Conference of the United States",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 301 \u00A7 301.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "General provisions.",
+      "AgencyName": "Administrative Conference of the United States",
+      "Type": "Section",
+      "PublicationDate": "2017-03-14T00:00:00",
+      "Citation": "Title 1 Part 304 \u00A7 304.1",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Public reading room.",
+      "AgencyName": "Administrative Conference of the United States",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 304 \u00A7 304.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Appeals.",
+      "AgencyName": "Administrative Conference of the United States",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 304 \u00A7 304.8",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Notice of court-ordered and emergency disclosures.",
+      "AgencyName": "Administrative Conference of the United States",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 304 \u00A7 304.28",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Other rights and services.",
+      "AgencyName": "Administrative Conference of the United States",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 304 \u00A7 304.34",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Purpose and scope.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 425 \u00A7 425.1",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Procedure for requests for access to or disclosure of records pertaining to individuals.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 425 \u00A7 425.3",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Correction of records.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 425 \u00A7 425.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Identification required when requesting access to records pertaining to an individual.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2018-05-02T00:00:00",
+      "Citation": "Title 1 Part 426 \u00A7 426.105",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Procedures for appealing a refusal to amend or correct a record.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2018-05-02T00:00:00",
+      "Citation": "Title 1 Part 426 \u00A7 426.107",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Appeals.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2018-05-02T00:00:00",
+      "Citation": "Title 1 Part 426 \u00A7 426.208",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Other rights and services.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2018-05-02T00:00:00",
+      "Citation": "Title 1 Part 426 \u00A7 426.211",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Purpose and scope.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 455 \u00A7 455.1",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Fees.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 455 \u00A7 455.10",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Penalties.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 455 \u00A7 455.11",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Definitions.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 455 \u00A7 455.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Agency review of request for correction or amendment of the record.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 455 \u00A7 455.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Preservation of FOIA records.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 456 \u00A7 456.16",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Expedited processing.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 456 \u00A7 456.9",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Definitions.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 457 \u00A7 457.103",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Self-evaluation.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 457 \u00A7 457.110",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Application.",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 500 \u00A7 500.102",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "\u00A7\u00A7 500.152-500.159 [Reserved]",
+      "AgencyName": "Miscellaneous Agencies",
+      "Type": "Section",
+      "PublicationDate": "2015-12-18T00:00:00",
+      "Citation": "Title 1 Part 500 \u00A7\u00A7 500.152-500.159",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Policies.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Lead Agency obligations.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.5",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "NEPA submission schedule for applications governed by the National Capital Planning Act.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.8",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Commission actions generally eligible for an Environmental Assessment.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.14",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Finding of No Significant Impact.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.16",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Programmatic Environmental Impact Statements and tiering.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.21",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "\u00A7 601.29 [Reserved]",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-30T00:00:00",
+      "Citation": "Title 1 Part 601 \u00A7 601.29",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Policy.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 602 \u00A7 602.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Information available without a FOIA Request.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 602 \u00A7 602.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Consultations and referrals.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 602 \u00A7 602.9",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Conditions for disclosure.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 603 \u00A7 603.10",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Requests for notification of the existence of Records.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 603 \u00A7 603.12",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Requests for access to Records.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 603 \u00A7 603.13",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Standards used to Maintain Records.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 603 \u00A7 603.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "System of Records Notice or SORN.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 603 \u00A7 603.6",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Government contracts.",
+      "AgencyName": "National Capital Planning Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-10-20T00:00:00",
+      "Citation": "Title 1 Part 603 \u00A7 603.9",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Creation and authority.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.1",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "The Commission.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.11",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Office of New Reactors.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.44",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Office of Public Affairs.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.28",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Office of the Chief Information Officer.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.35",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Office of Investigations.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.36",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Atomic Safety and Licensing Board Panel.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2020-11-16T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.15",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Report of violations.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 1 \u00A7 1.59",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Scope.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 10 \u00A7 10.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Purpose of the procedures.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 10 \u00A7 10.20",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Suspension of access authorization and/or employment clearance.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 10 \u00A7 10.21",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Procedures for hearing and review.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 10 \u00A7 10.24",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Reactor Site Criteria",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Appendix",
+      "PublicationDate": "2020-06-30T00:00:00",
+      "Citation": "Title 10 Part 100",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Definitions.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 100 \u00A7 100.3",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Communications.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 100 \u00A7 100.4",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Determination of exclusion area, low population zone, and population center distance.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2020-06-19T00:00:00",
+      "Citation": "Title 10 Part 100 \u00A7 100.11",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Non-seismic siting criteria.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 100 \u00A7 100.21",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Application for special nuclear material access authorization.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2022-10-03T00:00:00",
+      "Citation": "Title 10 Part 11 \u00A7 11.15",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Application for special nuclear material access authorization.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2021-08-09T00:00:00",
+      "Citation": "Title 10 Part 11 \u00A7 11.15",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Cancellation of request for special nuclear material access authorization.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 11 \u00A7 11.16",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Violations.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 11 \u00A7 11.30",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Purpose.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2016-12-30T00:00:00",
+      "Citation": "Title 10 Part 11 \u00A7 11.1",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Export and Import of Nuclear Equipment and Material",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Appendix",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Export and Import of Nuclear Equipment and Material",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Appendix",
+      "PublicationDate": "2018-12-21T00:00:00",
+      "Citation": "Title 10 Part 110",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Export and Import of Nuclear Equipment and Material",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Appendix",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Export and Import of Nuclear Equipment and Material",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Appendix",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Definitions.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2021-08-09T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Definitions.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-12-15T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Definitions.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.2",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Interpretations.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.3",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Information collection requirements: OMB approval.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.7",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "Deliberate misconduct.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2017-01-01T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.7b",
+      "Url": null
+    },
+    {
+      "DocumentNumber": null,
+      "Title": "General license for the export of special nuclear material.",
+      "AgencyName": "Nuclear Regulatory Commission",
+      "Type": "Section",
+      "PublicationDate": "2020-12-31T00:00:00",
+      "Citation": "Title 10 Part 110 \u00A7 110.21",
+      "Url": null
+    }
+  ],
+  "Statistics": [
+    {
+      "AgencyName": "Nuclear Regulatory Commission",
+      "DocumentCount": 33,
+      "Checksum": "b7a2eed222ec30f8ddb23a681b5ff61a310eac12a9174c8b5b0f1ddec2be5c2b",
+      "LastUpdated": "2026-01-04T05:28:15.7375101Z"
+    },
+    {
+      "AgencyName": "Administrative Committee of the Federal Register",
+      "DocumentCount": 27,
+      "Checksum": "ecdd1b1e7c26e8d47fd141c417acd6da3889f588da6f811ebd192093ea18c1c5",
+      "LastUpdated": "2026-01-04T05:28:15.7371587Z"
+    },
+    {
+      "AgencyName": "Miscellaneous Agencies",
+      "DocumentCount": 18,
+      "Checksum": "d3c5e96b4c5f570831867b5a4a39d48a2719acfe5495864db6056fcc2b499fe5",
+      "LastUpdated": "2026-01-04T05:28:15.7373538Z"
+    },
+    {
+      "AgencyName": "National Capital Planning Commission",
+      "DocumentCount": 16,
+      "Checksum": "6bc33da4c64aa253ea3272c9de193121059b1ed17cce2ecce8e09533d5e42826",
+      "LastUpdated": "2026-01-04T05:28:15.7374108Z"
+    },
+    {
+      "AgencyName": "Administrative Conference of the United States",
+      "DocumentCount": 6,
+      "Checksum": "4e4d1c04ed5f8dada17b66742c2161e2dbd6ec65ae847d6fd41607f8941af6bd",
+      "LastUpdated": "2026-01-04T05:28:15.7372689Z"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+@model List<ECFRApp_test.Models.HistoricalChange>
+@{
+    ViewData["Title"] = "Historical Changes";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Historical Changes Over Time</h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title mb-0">Timeline Visualization</h5>
+                <button id="cleanupBtn" class="btn btn-sm btn-warning">
+                    <i class="bi bi-trash"></i> Cleanup Invalid Data
+                </button>
+            </div>
+            <div id="cleanupStatus"></div>
+            @if (Model.Any())
+            {
+                <div style="height: 400px; position: relative;">
+                    <canvas id="historicalChart"></canvas>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No historical data available. Historical data is collected each time you fetch new data from ECFR.gov.
+                </div>
+            }
+        </div>
+    </div>
+
+    @if (Model.Any())
+    {
+        var agencies = Model.Select(m => m.AgencyName).Distinct().ToList();
+        
+        <div class="card">
+            <div class="card-header">
+                <h5>Filter by Agency</h5>
+            </div>
+            <div class="card-body">
+                <select id="agencyFilter" class="form-select mb-3">
+                    <option value="">All Agencies</option>
+                    @foreach (var agency in agencies.OrderBy(a => a))
+                    {
+                        <option value="@agency">@agency</option>
+                    }
+                </select>
+
+                <div class="table-responsive">
+                    <table class="table table-striped" id="historicalTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Agency Name</th>
+                                <th>Document Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var change in Model.OrderByDescending(m => m.Date))
+                            {
+                                <tr data-agency="@change.AgencyName">
+                                    <td>@change.Date.ToString("g")</td>
+                                    <td>@change.AgencyName</td>
+                                    <td><span class="badge bg-info">@change.DocumentCount</span></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script>
+        @if (Model.Any())
+        {
+            var groupedData = Model.GroupBy(m => m.AgencyName).ToDictionary(g => g.Key, g => g.OrderBy(x => x.Date).ToList());
+            
+            <text>
+            // Prepare data for chart
+            const historicalData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(groupedData));
+            
+            console.log('Historical Data:', historicalData); // Debug log
+            
+            const datasets = Object.keys(historicalData).map((agency, index) => {
+                const colors = [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(153, 102, 255)',
+                    'rgb(255, 159, 64)',
+                    'rgb(199, 199, 199)',
+                    'rgb(83, 102, 255)',
+                    'rgb(255, 99, 255)',
+                    'rgb(99, 255, 132)'
+                ];
+                
+                const agencyData = historicalData[agency].map(item => ({
+                    x: new Date(item.Date),  // Changed from item.date to item.Date
+                    y: item.DocumentCount     // Changed from item.documentCount to item.DocumentCount
+                }));
+                
+                console.log(`${agency} data points:`, agencyData); // Debug log
+                
+                return {
+                    label: agency,
+                    data: agencyData,
+                    borderColor: colors[index % colors.length],
+                    backgroundColor: colors[index % colors.length] + '33',
+                    tension: 0.1,
+                    pointRadius: 5,
+                    pointHoverRadius: 7
+                };
+            });
+
+            console.log('Datasets:', datasets); // Debug log
+
+            const ctx = document.getElementById('historicalChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'hour',
+                                displayFormats: {
+                                    hour: 'MMM d, HH:mm'
+                                },
+                                tooltipFormat: 'MMM d, yyyy HH:mm'
+                            },
+                            title: {
+                                display: true,
+                                text: 'Date & Time'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Document Count'
+                            },
+                            ticks: {
+                                stepSize: 5,
+                                precision: 0
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Document Count Changes Over Time',
+                            font: {
+                                size: 16
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 12,
+                                padding: 10,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                title: function(context) {
+                                    return new Date(context[0].parsed.x).toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    }
+                }
+            });
+            
+            console.log('Chart created successfully'); // Debug log
+            </text>
+        }
+
+        // Agency filter functionality
+        document.getElementById('agencyFilter')?.addEventListener('change', function() {
+            const selectedAgency = this.value;
+            const rows = document.querySelectorAll('#historicalTable tbody tr');
+            
+            rows.forEach(row => {
+                if (selectedAgency === '' || row.dataset.agency === selectedAgency) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Cleanup functionality
+        document.getElementById('cleanupBtn')?.addEventListener('click', async function() {
+            const btn = this;
+            const status = document.getElementById('cleanupStatus');
+            
+            if (!confirm('This will remove historical entries with invalid agency names (Unknown, numbers, etc.). Continue?')) {
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Cleaning...';
+            status.innerHTML = '<div class="alert alert-info mt-2">Cleaning up invalid historical entries...</div>';
+            
+            try {
+                const response = await fetch('/api/ECFRData/cleanup-historical', {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    status.innerHTML = '<div class="alert alert-success mt-2">' + data.message + '</div>';
+                    setTimeout(() => location.reload(), 2000);
+                } else {
+                    status.innerHTML = '<div class="alert alert-danger mt-2">Error: ' + data.message + '</div>';
+                }
+            } catch (error) {
+                status.innerHTML = '<div class="alert alert-danger mt-2">Error: ' + error.message + '</div>';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-trash"></i> Cleanup Invalid Data';
+            }
+        });
+    </script>
+}

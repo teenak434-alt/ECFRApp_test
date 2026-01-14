@@ -1,0 +1,174 @@
+@model List<ECFRApp_test.Models.AgencyStatistics>
+@{
+    ViewData["Title"] = "Agency Checksums";
+    var selectedAgency = Context.Request.Query["agency"].ToString();
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Agency Data Checksums</h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">About Checksums</h5>
+            <p class="card-text">
+                Checksums are cryptographic hashes (SHA-256) calculated from each agency's document data. 
+                They provide a way to verify data integrity and detect any changes in the documents.
+                If the data changes, the checksum will be different.
+            </p>
+        </div>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Filter by Agency</h5>
+            </div>
+            <div class="card-body">
+                <select id="agencyFilter" class="form-select">
+                    <option value="">All Agencies</option>
+                    @foreach (var stat in Model.OrderBy(s => s.AgencyName))
+                    {
+                        <option value="@stat.AgencyName" selected="@(stat.AgencyName == selectedAgency)">@stat.AgencyName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5>Checksums by Agency</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="checksumTable">
+                        <thead>
+                            <tr>
+                                <th>Agency Name</th>
+                                <th>Document Count</th>
+                                <th>Checksum (SHA-256)</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var stat in Model.OrderBy(s => s.AgencyName))
+                            {
+                                <tr data-agency="@stat.AgencyName" class="@(stat.AgencyName == selectedAgency ? "table-active" : "")">
+                                    <td><strong>@stat.AgencyName</strong></td>
+                                    <td><span class="badge bg-primary">@stat.DocumentCount</span></td>
+                                    <td>
+                                        <code class="text-break" style="font-size: 0.85em;">@stat.Checksum</code>
+                                    </td>
+                                    <td>@stat.LastUpdated.ToString("g")</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary copy-btn" data-checksum="@stat.Checksum">
+                                            Copy
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Checksum Verification</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="checksumInput" class="form-label">Enter a checksum to verify:</label>
+                    <input type="text" class="form-control" id="checksumInput" placeholder="Enter checksum here">
+                </div>
+                <button id="verifyBtn" class="btn btn-primary">Verify Checksum</button>
+                <div id="verifyResult" class="mt-3"></div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            No checksum data available. Please fetch data from ECFR.gov first.
+        </div>
+    }
+
+    <div class="mt-3">
+        <a href="@Url.Action("Index", "Dashboard")" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Copy checksum to clipboard
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const checksum = this.dataset.checksum;
+                navigator.clipboard.writeText(checksum).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    this.classList.remove('btn-outline-primary');
+                    this.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.classList.remove('btn-success');
+                        this.classList.add('btn-outline-primary');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Agency filter
+        document.getElementById('agencyFilter')?.addEventListener('change', function() {
+            const selectedAgency = this.value;
+            const rows = document.querySelectorAll('#checksumTable tbody tr');
+            
+            rows.forEach(row => {
+                if (selectedAgency === '' || row.dataset.agency === selectedAgency) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Verify checksum
+        document.getElementById('verifyBtn')?.addEventListener('click', function() {
+            const input = document.getElementById('checksumInput').value.trim().toLowerCase();
+            const result = document.getElementById('verifyResult');
+            
+            if (!input) {
+                result.innerHTML = '<div class="alert alert-warning">Please enter a checksum to verify.</div>';
+                return;
+            }
+
+            const checksums = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.ToDictionary(s => s.AgencyName, s => s.Checksum.ToLower())));
+            
+            const matchingAgency = Object.keys(checksums).find(agency => checksums[agency] === input);
+            
+            if (matchingAgency) {
+                result.innerHTML = `<div class="alert alert-success"><strong>? Valid Checksum!</strong><br/>This checksum matches the data for: <strong>${matchingAgency}</strong></div>`;
+            } else {
+                result.innerHTML = '<div class="alert alert-danger"><strong>? Invalid Checksum</strong><br/>This checksum does not match any agency in the current data.</div>';
+            }
+        });
+
+        // Pre-populate if agency is selected
+        @if (!string.IsNullOrEmpty(selectedAgency))
+        {
+            <text>
+            document.getElementById('agencyFilter')?.dispatchEvent(new Event('change'));
+            </text>
+        }
+    </script>
+}

@@ -1,0 +1,172 @@
+@model List<ECFRApp_test.Models.AgencyStatistics>
+@{
+    ViewData["Title"] = "ECFR Dashboard - Agency Statistics";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">ECFR Dashboard - Agency Document Count</h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Summary</h5>
+                    <p class="card-text">
+                        <strong>Total Agencies:</strong> @Model.Count<br/>
+                        <strong>Total Documents:</strong> @ViewBag.TotalDocuments<br/>
+                        <strong>Last Updated:</strong> @(ViewBag.LastUpdated != null ? ((DateTime)ViewBag.LastUpdated).ToString("g") : "Not available")
+                    </p>
+                    @if (Model.Count == 1 && Model.First().AgencyName == "Unknown")
+                    {
+                        <div class="alert alert-warning mt-2" role="alert">
+                            <small><strong>Note:</strong> All documents are showing as "Unknown" agency. This may indicate an issue with API field parsing. Visit the <a href="@Url.Action("Index", "Debug")">Debug page</a> to investigate.</small>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Actions</h5>
+                    <button id="fetchDataBtn" class="btn btn-primary">Fetch Latest Data</button>
+                    <a href="@Url.Action("Index", "Debug")" class="btn btn-outline-secondary">Debug View</a>
+                    <div id="fetchStatus" class="mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h5>Documents Per Agency</h5>
+        </div>
+        <div class="card-body">
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Agency Name</th>
+                                <th>Document Count</th>
+                                <th>Last Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                var stat = Model[i];
+                                <tr>
+                                    <td>@(i + 1)</td>
+                                    <td>@stat.AgencyName</td>
+                                    <td>
+                                        <span class="badge bg-primary">@stat.DocumentCount</span>
+                                    </td>
+                                    <td>@stat.LastUpdated.ToString("g")</td>
+                                    <td>
+                                        <a href="@Url.Action("Checksums", "Dashboard")?agency=@stat.AgencyName" class="btn btn-sm btn-outline-secondary">View Checksum</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                @if (Model.Count > 1 || (Model.Count == 1 && Model.First().AgencyName != "Unknown"))
+                {
+                    <div class="mt-4">
+                        <canvas id="agencyChart" width="400" height="200"></canvas>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No data available. Click "Fetch Latest Data" to load ECFR data.
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.getElementById('fetchDataBtn').addEventListener('click', async function() {
+            const btn = this;
+            const status = document.getElementById('fetchStatus');
+            
+            btn.disabled = true;
+            btn.textContent = 'Fetching...';
+            status.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div> Fetching data from ECFR.gov...';
+            
+            try {
+                const response = await fetch('/api/ECFRData/fetch?pageSize=100', {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    status.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
+                    setTimeout(() => location.reload(), 2000);
+                } else {
+                    status.innerHTML = '<div class="alert alert-danger">Error: ' + data.message + '</div>';
+                }
+            } catch (error) {
+                status.innerHTML = '<div class="alert alert-danger">Error fetching data: ' + error.message + '</div>';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Fetch Latest Data';
+            }
+        });
+
+        @if (Model.Any() && (Model.Count > 1 || Model.First().AgencyName != "Unknown"))
+        {
+            <text>
+            // Create chart
+            const ctx = document.getElementById('agencyChart').getContext('2d');
+            const topAgencies = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Take(10).Select(s => s.AgencyName)));
+            const documentCounts = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Take(10).Select(s => s.DocumentCount)));
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: topAgencies,
+                    datasets: [{
+                        label: 'Document Count',
+                        data: documentCounts,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Top 10 Agencies by Document Count'
+                        }
+                    }
+                }
+            });
+            </text>
+        }
+    </script>
+}
